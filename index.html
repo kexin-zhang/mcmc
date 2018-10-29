@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>HackGT Events</title>
+    </head>
+    <body>
+        <div class="parent">
+            <div>
+                <h4>Markov Chain Monte Carlo: Simulating the Normal Distribution</h4>
+                <p>Markov Chain Monte Carlo (MCMC) is a strategy for simulating some target distribution when sampling directly from the distribution is difficult. For ergodic (irreducible and aperiodic) Markov Chains, the distribution of realizations from the Markov Chain will converge to the stationary distribution as the number of realizations increases. MCMC tries to construct a Markov Chain with a stationary distribution that is the same as the target distribution. In this toy example, we use the Metropolis Hastings algorithm backed by a random walk to simulate the standard normal distribution.</p>
+            </div>
+            <div id="chart"></div>
+            <div id="hist"></div>
+        </div>
+        <script src="./js/jstat.min.js"></script>
+        <script src="./js/d3.v5.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
