@@ -114,7 +114,7 @@ let bars = hist_g.selectAll(".bar")
             .attr("width", (d) => (hist_x(d.x1) - hist_x(d.x0) - 1))
             .attr("height", (d) => (hist_height - hist_y(d.length)));
            
-g.append("g")
+hist_g.append("g")
  .attr("transform", `translate(0, ${hist_height})`)
  .call(d3.axisBottom(hist_x));
 
