@@ -8,9 +8,9 @@ let margin = {
     'bottom': 20,
     'right': 30
 };
-const hist_height = (420 - margin.top - margin.bottom) * (0.3 / 0.45);
-const height = 420 - margin.top - margin.bottom;
-const width = 1500 - margin.right - margin.left;
+const hist_height = (300 - margin.top - margin.bottom) * (0.3 / 0.4);
+const height = 300 - margin.top - margin.bottom;
+const width = 1000 - margin.right - margin.left;
 
 // function for sampling from our proposal distribution
 function f() {
@@ -114,7 +114,7 @@ let bars = hist_g.selectAll(".bar")
             .attr("width", (d) => (hist_x(d.x1) - hist_x(d.x0) - 1))
             .attr("height", (d) => (hist_height - hist_y(d.length)));
            
-hist_g.append("g")
+g.append("g")
  .attr("transform", `translate(0, ${hist_height})`)
  .call(d3.axisBottom(hist_x));
 
@@ -129,6 +129,8 @@ let counter = 1;
 let show = setInterval(() => {
     counter += 5;
     path.data([vals.slice(0, counter)])
+        .transition()
+        .duration(90)
         .attr("d", line);
 
     bins = histogram(vals.slice(0, counter));
